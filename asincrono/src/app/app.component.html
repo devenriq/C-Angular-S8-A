@@ -5,14 +5,18 @@
   <input type="text" />
   <label for="age">Edad</label>
   <input type="number" />
+  <button>Agregar</button>
 </form>
 
-<h3>Lista</h3>
+<h3>Lista de nombres incluidos</h3>
 
 <hr />
-<ul>
-  <li *ngFor="let usuario; in: users">
-    {{ info.nombre }} -
-    {{ info.poder | number }}
+<ul *ngIf="users.length > 0; else noAgregado">
+  <li *ngFor="let user of users; let i = index">
+    {{ i + 1 }} {{ user.name }} - {{ user.lastName }} - {{ user.age }}
   </li>
 </ul>
+
+<ng-template #noAgregado>
+  <h3>No se ha agregado nada</h3>
+</ng-template>

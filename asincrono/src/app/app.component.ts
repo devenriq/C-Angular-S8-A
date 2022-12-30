@@ -7,6 +7,12 @@ import { Info } from './components/info.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users: Info[]=[]
+  users: Info[]=[
+    // {
+    //   name: 'enrique',
+    //   lastName: 'palomino',
+    //   age: 25
+    // }
+  ]
 
 }
