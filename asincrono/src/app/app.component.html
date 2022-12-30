@@ -1,0 +1,18 @@
+<form action="">
+  <label for="name">Nombre</label>
+  <input type="text" />
+  <label for="lastname">Apellido</label>
+  <input type="text" />
+  <label for="age">Edad</label>
+  <input type="number" />
+</form>
+
+<h3>Lista</h3>
+
+<hr />
+<ul>
+  <li *ngFor="let usuario; in: users">
+    {{ info.nombre }} -
+    {{ info.poder | number }}
+  </li>
+</ul>
