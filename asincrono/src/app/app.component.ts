@@ -8,11 +8,16 @@ import { Info } from './components/info.interface';
 })
 export class AppComponent {
   users: Info[]=[
-    // {
-    //   name: 'enrique',
-    //   lastName: 'palomino',
-    //   age: 25
-    // }
+    {
+      name: 'enrique',
+      lastName: 'palomino',
+      age: 25
+    }
   ]
+
+  agregar(event:Event){
+    event.preventDefault()
+    console.log(this.users)
+  }
 
 }

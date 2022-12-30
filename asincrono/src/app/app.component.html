@@ -1,11 +1,11 @@
 <form action="">
   <label for="name">Nombre</label>
-  <input type="text" />
+  <input type="text" (input)="()" />
   <label for="lastname">Apellido</label>
   <input type="text" />
   <label for="age">Edad</label>
   <input type="number" />
-  <button>Agregar</button>
+  <button (click)="agregar($event)">Agregar</button>
 </form>
 
 <h3>Lista de nombres incluidos</h3>
