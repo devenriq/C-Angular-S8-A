@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgModel } from '@angular/forms';
+
 import { Info } from './components/info.interface';
 
 @Component({
@@ -7,17 +9,28 @@ import { Info } from './components/info.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users: Info=
-    {
-      name: 'enrique',
-      lastName: 'palomino',
-      age: 25
-    }
+  people: Info[]=[
 
+  ]
+
+  users={
+    name: 'enrique',
+    lastName: 'Palomino',
+    age: 25
+  }
 
   agregar(event:Event){
-    event.preventDefault()
-    console.log(this.users)
+    if (this.users.name.trim().length===0 && this.users.lastName.trim().length===0) {
+      return
+    }
+
+    this.people.push(this.users)
+
+    this.users={
+      name:'',
+      lastName:'',
+      age:0
+    }
   }
 
 }

@@ -11,9 +11,9 @@
 <h3>Lista de nombres incluidos</h3>
 
 <hr />
-<ul *ngIf="users.length > 0; else noAgregado">
-  <li *ngFor="let user of users; let i = index">
-    {{ i + 1 }} {{ user.name }} - {{ user.lastName }} - {{ user.age }}
+<ul *ngIf="people.length > 0; else noAgregado">
+  <li *ngFor="let person of people; let i = index">
+    {{ i + 1 }} {{ person.name }} - {{ person.lastName }} - {{ person.age }}
   </li>
 </ul>
 
